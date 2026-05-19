@@ -1,0 +1,18 @@
+title: Zar's Blog
+description: Thoughts, tutorials, and more.
+url: "https://zar-aio.github.io"
+baseurl: ""
+author:
+  name: Zar
+  bio: Developer & writer sharing thoughts on tech and life.
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

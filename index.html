@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <span class="hero-badge">Welcome</span>
+  <h1>Hey, I'm Zar 👋</h1>
+  <p>
+    Developer, curious learner, and occasional writer. I share thoughts on software engineering,
+    open-source tooling, and the things I'm figuring out along the way.
+  </p>
+  <a href="{{ '/blog/' | relative_url }}" class="btn">Read the Blog</a>
+  <a href="https://github.com/zar-aio" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+</section>
+
+<section>
+  <h2 class="section-title">Recent Posts</h2>
+  <div class="post-list">
+    {% for post in site.posts limit: 3 %}
+      <article class="post-card">
+        <div class="post-card-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
